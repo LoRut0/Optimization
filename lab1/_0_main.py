@@ -1,0 +1,7 @@
+import _1_brute_force_on_uniform_field
+import _2_division_by_2
+import _3_golden_ratio
+import _4_fibonacci
+import _5_derivative
+import _6_tangent
+import _7_parabales
