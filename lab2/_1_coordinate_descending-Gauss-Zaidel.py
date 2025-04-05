@@ -22,7 +22,11 @@ def coordinate_descending(error):
             break
         else:
             x_prev = x[::]
-    return x
+    return x, function(x), k
 
 for error in eps:
-    print(coordinate_descending(error))
+    results = coordinate_descending(error) 
+    print("max error =", error)
+    print("x =", results[0])
+    print("y =", results[1])
+    print("iterations =", results[2], "\n")
