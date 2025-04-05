@@ -14,15 +14,14 @@ def coordinate_descending(error):
     x_prev = x[::]
     k = 0
     flag = False
-    while (not flag):
+    while (True):
         k += 1
         for i in range(3):
             x = golden_ratio(x, i, error)
-            if (linalg.norm(diff(x, x_prev)) <= error):
-                flag = True
-                break
-            else:
-                x_prev = x[::]
+        if (linalg.norm(diff(x, x_prev)) <= error):
+            break
+        else:
+            x_prev = x[::]
     return x
 
 for error in eps:
