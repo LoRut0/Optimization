@@ -12,12 +12,11 @@ def nelder_mead(f,
                 rho=-0.5, 
                 sigma=0.5):
     """
-    Parameters:
+    parameters:
     - f: целевая функция
     - x_start: начальная точка (numpy-массив)
     - step: размер начального симплекса
     - error: порог улучшения
-    - max_iter: максимальное число итераций (0 — бесконечно)
     - alpha, gamma, rho, sigma: параметры метода
 
     returns:
