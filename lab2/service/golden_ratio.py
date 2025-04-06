@@ -16,8 +16,8 @@ def golden_ratio(x, x_num, error):
     x2 = a + alph * ( b - a )
     array_left[x_num] = x1
     array_right[x_num] = x2
-    fx1 = function(array_left[0], array_left[1], array_left[2])
-    fx2 = function(array_right[0], array_right[1], array_right[2])
+    fx1 = function(array_left)
+    fx2 = function(array_right)
 
     while (True):
         if (fx1 < fx2):
@@ -26,14 +26,14 @@ def golden_ratio(x, x_num, error):
             fx2 = fx1
             x1 = a + ( 1 - alph ) * ( b - a )
             array_left[x_num] = x1
-            fx1 = function(array_left[0], array_left[1], array_left[2])
+            fx1 = function(array_left)
         else:
             a = x1
             x1 = x2
             fx1 = fx2
             x2 = a + alph * ( b - a )
             array_right[x_num] = x2
-            fx2 = function(array_right[0], array_right[1], array_right[2])
+            fx2 = function(array_right)
         delta = (b - a) / 2
         if (delta <  error):
             x[x_num] = (b + a) / 2
